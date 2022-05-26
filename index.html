@@ -13,6 +13,8 @@
                 padding-left: 7px;
             }
         </style>
+
+        <audio id="audio" src="./newButtonSound.mp3"></audio>
 	</head>
 	<body>
         <h1>David's random site</h1>
@@ -37,6 +39,9 @@
             newButton.onclick=addButton;
             const buttonHouse=document.getElementById("buttonContainer");
             buttonHouse.appendChild(newButton);
+
+            const audio = document.getElementById("audio");
+            audio.play();
         } 
     </script>
 </html>
