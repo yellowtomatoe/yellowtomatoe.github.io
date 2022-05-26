@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta content="utf-8" http-equiv="encoding">
+        <style>
+            button {
+                background-color: white;
+                border-radius: 10px;
+                padding-top: 3px;
+                padding-bottom: 3px;
+                padding-right: 7px;
+                padding-left: 7px;
+            }
+        </style>
+	</head>
+	<body>
+        <h1>David's random site</h1>
+        <div>
+            <p>This is david's random site! on here, you can click as many buttons as you want.</p>
+        </div>
+        <button>click here</button>
+        <div id="buttonContainer"></div>
+	</body>
+    <script>
+        // console.log("googy");
+        const button = document.querySelector('button');
+
+        button.addEventListener('click', event => {
+        console.log("yellow cucumber");
+        addButton();
+        });
+
+        function addButton(){
+            const newButton=document.createElement("button");
+            newButton.textContent="you have created a button";
+            newButton.onclick=addButton;
+            const buttonHouse=document.getElementById("buttonContainer");
+            buttonHouse.appendChild(newButton);
+        } 
+    </script>
+</html>
+
